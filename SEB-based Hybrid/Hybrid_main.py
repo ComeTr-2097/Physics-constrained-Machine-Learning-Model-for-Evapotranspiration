@@ -11,7 +11,7 @@ date:    May 2024
 """
 
 #First load python micrometeorological functions
-import Hybrid_f2_SEB
+import Hybrid_f
 import math
 
 import pandas as pd
