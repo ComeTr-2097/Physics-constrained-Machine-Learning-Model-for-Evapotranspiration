@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 28 09:31:51 2024
-
-@author: dell
-"""
-
-# -*- coding: utf-8 -*-
 """ Hybrid_f: A libray with Python functions for calculations of micrometeorological parameters.
 
     Meteorological functions:
@@ -16,7 +9,7 @@ Created on Thu Mar 28 09:31:51 2024
         - ra_SEB_Inv:  Calculate aerodynamic resistance:invert the surface energy balance equation for rs [s/m]
 
 
-@author: Zhang Chen <12214067@zju.edu.cn>
+@author: Chen Zhang(12214067@zju.edu.cn)
 version: 1.0
 date:    May 2024
 """
