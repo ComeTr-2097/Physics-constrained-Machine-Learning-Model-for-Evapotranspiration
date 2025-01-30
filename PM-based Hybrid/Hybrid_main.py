@@ -1,17 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 28 16:38:33 2024
-
-@author: Chen Zhang(12214067@zju.edu.cn)
-"""
-
-"""
 Hybrid_main: A libray with Python functions for calculations of actual evapotranspiration.
-
         Functions: 
-        - rs_RF:  Calculate surface resistance [s/m]
         - ETa:    Calculate actual evapotranspiration
-
 @author: Zhang Chen <12214067@zju.edu.cn>
 version: 1.0
 date:    July 2023
@@ -23,11 +14,6 @@ import math
 
 import pandas as pd
 import numpy as np
-
-
-# #Calculate rs with RF model
-# def rs_RF()
-
 
 #Calculate Penman-Monteith evaporation (actual)
 def ETa(airtemp = np.array([]),\
