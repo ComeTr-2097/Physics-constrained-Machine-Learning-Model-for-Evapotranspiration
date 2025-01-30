@@ -5,8 +5,8 @@ Created on Sat May 11 15:27:53 2024
 @author: Chen Zhang(12214067@zju.edu.cn)
 """
 
-import Hybrid_main2
-import Hybrid_f2
+import Hybrid_main
+import Hybrid_f
 from data_prep_M import X2_scaled, y2, EC_total
 
 import pandas as pd
