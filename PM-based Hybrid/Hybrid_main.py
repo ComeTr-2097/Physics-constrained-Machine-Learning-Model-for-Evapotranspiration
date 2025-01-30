@@ -3,7 +3,7 @@
 Hybrid_main: A libray with Python functions for calculations of actual evapotranspiration.
         Functions: 
         - ETa:    Calculate actual evapotranspiration
-@author: Zhang Chen <12214067@zju.edu.cn>
+@author: Chen Zhang(12214067@zju.edu.cn)
 version: 1.0
 date:    July 2023
 """
