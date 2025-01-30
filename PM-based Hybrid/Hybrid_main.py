@@ -9,7 +9,7 @@ date:    July 2023
 """
 
 #First load python micrometeorological functions
-import Hybrid_f2
+import Hybrid_f
 import math
 
 import pandas as pd
