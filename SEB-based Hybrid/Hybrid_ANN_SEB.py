@@ -5,8 +5,8 @@ Created on Fri Jun 21 14:09:17 2024
 @author: Chen Zhang(12214067@zju.edu.cn)
 """
 
-import Hybrid_main_SEB
-import Hybrid_f_SEB
+import Hybrid_main
+import Hybrid_f
 from data_prep_M import X2_scaled, y2, EC_total
 
 import pandas as pd
