@@ -2,7 +2,7 @@
 """
 Created on Sat May 11 15:27:53 2024
 
-@author: dell
+@author: Chen Zhang
 """
 
 import Hybrid_main2
