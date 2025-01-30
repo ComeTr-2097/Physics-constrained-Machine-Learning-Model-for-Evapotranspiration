@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 28 09:31:51 2024
-
-@author: Chen Zhang(12214067@zju.edu.cn)
-"""
-
-# -*- coding: utf-8 -*-
 """ Hybrid_f: A libray with Python functions for calculations of micrometeorological parameters.
 
     Miscellaneous functions:
@@ -26,12 +19,10 @@ Created on Thu Mar 28 09:31:51 2024
         - rs_PM_Inv:  Calculate surface resistance:invert the PM equation for rs [s/m]
 
 
-@author: Zhang Chen <12214067@zju.edu.cn>
+@author: Chen Zhang(12214067@zju.edu.cn)
 version: 2.0
 date:    March 2024
 """
-
-
 
 
 #First load python micrometeorological functions
