@@ -1,4 +1,4 @@
-#About Physics-contrained ET Hybrid Model
+# About Physics-contrained ET Hybrid Model
 
 The hybrid model in this study consists of two main components: a machine learning module for simulating rs or ra, and a physical model for predicting LE. The introduction of the machine learning component adds computational cost compared to the physical model. The training time of the RF and LGBM models is relatively fast (within 10 minutes). The fitting process of the ANN requires a relatively longer training time (about 30 minutes), mainly due to the adjustment of synaptic weights through backpropagation. However, we implemented an early stopping strategy to minimize computational resource waste and prevent overfitting. As machine learning is less dependent on specific hardware, the hybrid model remains competitive, offering high prediction accuracy with only a slight increase in computational cost, thus providing excellent cost-effectiveness. The hardware platform used in the experiments consists of a 32-core CPU and 64GB system memory. During training, the average CPU and memory utilization were 30% and 50%, respectively.
 
