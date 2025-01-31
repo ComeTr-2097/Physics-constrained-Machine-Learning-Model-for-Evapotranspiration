@@ -13,6 +13,6 @@ In the Penman Monteith (PM) approach, surface resistance (rs) governs the water 
 Here is the structure of the hybrid models, and additional details are provided in the accompanying code.
 
 ## Hybrid Models Structure
-![Hybrid_ANN](https://github.com/user-attachments/assets/74afcc0f-8458-4e17-8c12-2eba2c9f4e94)
-![Hybrid_RF](https://github.com/user-attachments/assets/801a2efd-731b-482e-859d-396014b9f8bc)
-![Hybrid_LGBM](https://github.com/user-attachments/assets/159c3ee3-940a-4db9-b1c3-c08645b99d6d)
+![Hybrid_ANN](https://github.com/user-attachments/assets/f8115f26-63c8-44aa-98d9-0e7fa1a937ec)
+![Hybrid_RF](https://github.com/user-attachments/assets/55e6b5d3-0d3a-4f0d-b33c-ba9cdf5afe55)
+![Hybrid_LGBM](https://github.com/user-attachments/assets/1c8f8494-4db5-45c8-ab81-cfc6987dd52a)
