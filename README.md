@@ -1,4 +1,4 @@
-# About Physics-contrained ET Hybrid Model
+# Physics-contrained Machine learning Model for ET
 
 The hybrid model consists of two main components: a machine learning module for simulating surface resistance (rs) or aerodynamic resistance (ra), and a physical model (Penman Monteith or Surface Energy Balance model) for predicting LE.
 
