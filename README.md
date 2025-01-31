@@ -11,6 +11,8 @@ After reviewing the required model attributes for regional ET algorithms, we uti
 In the Penman Monteith (PM) approach, surface resistance (rs) governs the water vapor and energy exchange between the ground surface and the atmosphere. rs is controlled by the joint effect of meteorological, soil, and vegetation factors. Numerous studies have showed that rs is a primary source of uncertainty in PM-based estimations.In the surface energy balance (SEB) model, aerodynamic resistance (ra) is the most sensitive parameter, as it captures the turbulent exchange between the land surface and the atmosphere. Traditionally, ra has been parameterized as a function of surface roughness, vegetation, and soil variables, with considerable variability across climates and surface types. However, the determination of these atmospheric boundary layer parameters is quite complex and difficult, thus lead to errors in ra estimation.  we employed machine learning models to predict rs and ra, and subsequently incorporated the predicted rs or ra into the PM and SEB method to estimate LE. The resulting model is referred to as the ML_PM or ML_SEB hybrid model.
 
 Here is the structure of the hybrid models, and additional details are provided in the accompanying code.
+
+## Hybrid Models Structure
 ![Hybrid_ANN](https://github.com/user-attachments/assets/74afcc0f-8458-4e17-8c12-2eba2c9f4e94)
 ![Hybrid_RF](https://github.com/user-attachments/assets/801a2efd-731b-482e-859d-396014b9f8bc)
 ![Hybrid_LGBM](https://github.com/user-attachments/assets/159c3ee3-940a-4db9-b1c3-c08645b99d6d)
