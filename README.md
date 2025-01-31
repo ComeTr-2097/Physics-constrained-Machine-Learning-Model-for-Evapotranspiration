@@ -1,25 +1,16 @@
 # About Physics-contrained ET Hybrid Model
 
-The hybrid model consists of two main components: a machine learning module for simulating surface resistance (rs) or aerodynamic resistance (ra), and a physical model for predicting LE.
+The hybrid model consists of two main components: a machine learning module for simulating surface resistance (rs) or aerodynamic resistance (ra), and a physical model (Penman Monteith or Surface Energy Balance model) for predicting LE.
 
 We developed our hybrid models using Python. Similar to machine learning models, the dataset was partitioned into training (70%) and validation (20%) sets to dynamically update the internal model parameters during the fitting process. The test set (10%) was then used to assess the performance of the physics-constrained hybrid models. 
 
-## Physics-based Models
-The partitioning of energy at the Earth’s surface is governed by the following three coupled equations (Mu et al., 2007):
-H=ρc_p  (T_s-T_a)/r_a                          …(1)
-LE=(ρc_p)/γ  (e_s-e_a)/(r_a+r_s )                         …(2)
-R_n-G=H+LE                      …(3)
-Where H, LE are the fluxes of sensible heat (W m-2), latent heat (W m-2), Rn is net radiation (W m-2), G is soil heat flux (W m-2); Ts, Ta are the temperature of land surface and air (K); es, ea are saturation and actual vapour pressure (Pa); ra is the aerodynamic resistance (s m-1), rs is the surface resistance (s m-1), ρ is air density (kg m-3), and cp is the specific heat capacity of air (J kg-1 K-1), γ is the psychrometric constant (Pa K-1).
+We employed three machine learning (ML) approaches — Artificial Neural Network (ANN), Random Forest (RF), and Light Gradient Boosting Machine (LGBM) — to develop both data-driven and physics-constrained ET models. These ML approaches with different characteristics and complexity, have been widely applied in the carbon and water cycle modeling for terrestrial ecosystems. ANN simulates human neural networks by adjusting synaptic weights through backpropagation, allowing it to learn intricate data patterns. RF, as an ensemble method of decision trees, builds each tree from randomized subsets and averages predictions for enhanced accuracy. LGBM, an optimized gradient boosting method, uses a leaf-wise strategy for tree expansion, supported by efficient sampling techniques, to improve model accuracy and training speed.
 
-These fundamental equations constitute the foundation of various terrestrial ET modeling approaches. Accurate estimation of parameters—ra, rs, and radiative surface temperature—is essential for effective ET modeling (Chen and Liu, 2020). After reviewing the required model attributes for regional ET algorithms, we utilized two classical models: the surface energy balance model and Penman Monteith model.
-2.3.1 Surface Energy Balance Model
-The surface energy balance (SEB) model calculates the flux of sensible heat from Eq. (1) by calculating the aerodynamic resistance (ra) from:
-r_a=1/(k^2 u) ln((Z_m-d)/Z_0m )ln((Z_h-d)/Z_0h )                      …(4)
-Where k is von Karman’s constant (0.4), u is wind speed (m s-1) at the measurement height (Zm) (m), Zh is height of humidity measurements (m), d is zero plane displacement height (m), Z0m is roughness length governing momentum transfer (m), Z0h is roughness length governing transfer of heat and vapour (m). The quantities d, Z0m, and Z0h are estimated as 2h/3, 0.1h, and 0.01h, respectively, where h is canopy height (m). Zm, Zh, and h are site-specific. LE is then calculated as the residual of the energy balance using Eq. (5). SEB mainly requires Tair, Tsoil, P, WS, Rn, G, hc.
-LE=R_n-G-ρc_p  (T_s-T_a)/r_a                       …(5)
-### Penman Monteith Model
-The Penman Monteith (PM) model has been successfully applied to the MODIS global ET framework, which eliminates Ts (Eq. (6)) and utilizes remotely sensed vegetation indices to inform the model of the water availability on the land surface (Eq. (7)).
-e_s=e_a+∆(T_s-T_a)                      …(6)
-LE=(Δ(R_n-G)+ρc_P (e_s-e_a)/r_a)/(Δ+γ(1+r_s/r_a))                  …(7)
-Where ∆ is the slope of the saturated vapor pressure curve (kPa K-1), The surface resistances (rs) used in MODIS ET for different plant function types is determined by the Biome Properties Look-Up Table (BPLUT) (Mu et al., 2007; Mu et al., 2011). PM mainly requires Tair, Tair_min, RH, P, WS, Rn, G, hc, LAI.
+After reviewing the required model attributes for regional ET algorithms, we utilized two classical models: the Penman Monteith model and surface energy balance model.The Penman Monteith (PM) model has been successfully applied to the MODIS global ET framework, which eliminates land surface temperature and utilizes remotely sensed vegetation indices to inform the model of the water availability on the land surface. More details are showed in [MOD16](https://github.com/arthur-e/MOD16) The surface energy balance (SEB) model calculates the flux of sensible heat by calculating the aerodynamic resistance (ra). More reference is [here](https://github.com/jvdkwast/PySEBS).
 
+In the Penman Monteith (PM) approach, surface resistance (rs) governs the water vapor and energy exchange between the ground surface and the atmosphere. rs is controlled by the joint effect of meteorological, soil, and vegetation factors. Numerous studies have showed that rs is a primary source of uncertainty in PM-based estimations.In the surface energy balance (SEB) model, aerodynamic resistance (ra) is the most sensitive parameter, as it captures the turbulent exchange between the land surface and the atmosphere. Traditionally, ra has been parameterized as a function of surface roughness, vegetation, and soil variables, with considerable variability across climates and surface types. However, the determination of these atmospheric boundary layer parameters is quite complex and difficult, thus lead to errors in ra estimation.  we employed machine learning models to predict rs and ra, and subsequently incorporated the predicted rs or ra into the PM and SEB method to estimate LE. The resulting model is referred to as the ML_PM or ML_SEB hybrid model.
+
+Here is the structure of the hybrid models, and additional details are provided in the accompanying code.
+![Hybrid_ANN](https://github.com/user-attachments/assets/74afcc0f-8458-4e17-8c12-2eba2c9f4e94)
+![Hybrid_RF](https://github.com/user-attachments/assets/801a2efd-731b-482e-859d-396014b9f8bc)
+![Hybrid_LGBM](https://github.com/user-attachments/assets/159c3ee3-940a-4db9-b1c3-c08645b99d6d)
