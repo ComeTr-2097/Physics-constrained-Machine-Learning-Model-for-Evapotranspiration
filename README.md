@@ -14,5 +14,5 @@ Here is the structure of the hybrid models, and additional details are provided 
 
 ## Hybrid Models Structure
 ![Hybrid_ANN](https://github.com/user-attachments/assets/f8115f26-63c8-44aa-98d9-0e7fa1a937ec)
-![Hybrid_RF](https://github.com/user-attachments/assets/55e6b5d3-0d3a-4f0d-b33c-ba9cdf5afe55)
+![Hybrid_RF](https://github.com/user-attachments/assets/de44546a-5c3c-4a35-a70b-aaa5b2142c57)
 ![Hybrid_LGBM](https://github.com/user-attachments/assets/1c8f8494-4db5-45c8-ab81-cfc6987dd52a)
