@@ -1,5 +1,7 @@
 # Physics-contrained Machine learning Model for Evapotranspiration
 
+Please contact me and quote my article in your writting if you want to use my code to complete your project!
+
 The hybrid model consists of two main components: a machine learning module for simulating surface resistance (rs) or aerodynamic resistance (ra), and a physical model (Penman Monteith or Surface Energy Balance model) for predicting LE.
 
 We developed our hybrid models using Python. Similar to machine learning models, the dataset was partitioned into training (70%) and validation (20%) sets to dynamically update the internal model parameters during the fitting process. The test set (10%) was then used to assess the performance of the physics-constrained hybrid models. 
