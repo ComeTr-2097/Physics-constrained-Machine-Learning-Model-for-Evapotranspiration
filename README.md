@@ -1,7 +1,6 @@
 # Physics-contrained Machine learning Model for Evapotranspiration
 
-Please contact me and quote my article in your writting if you want to use my code to complete your project!
-DOI: https://doi.org/10.1016/j.jhydrol.2025.133512
+Please contact me and quote my article in your writting if you want to use my code to complete your project! DOI: https://doi.org/10.1016/j.jhydrol.2025.133512
 
 The hybrid model consists of two main components: a machine learning module for simulating surface resistance (rs) or aerodynamic resistance (ra), and a physical model (Penman Monteith or Surface Energy Balance model) for predicting LE.
 
